@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class HelloServlet
  */
-@WebServlet("/Hello")
+@WebServlet("/HelloServlet") //어노테이션 XML로 설정해주는것을 간단하게 설정  뒤에 /hello가 URL맵핑이다.
 public class HelloServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
@@ -31,10 +31,17 @@ public class HelloServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub //클래스이름은 대문자!
 	
+		response.setContentType("text/html;charset=UTF-8"); //반응 할때 html형식으로 지원하고 UTF-8코드를 사용
+		request.setCharacterEncoding("UTF-8"); //요청인코딩 타입을 설정한다.
 		PrintWriter out =response.getWriter();
 		//.은 소속을 나타낸다.
-		
-		out.print("Hello");
+		String name = request.getParameter("name");
+		String i =request.getParameter("id"); //요청받는 값을 i변수에 저장
+		String p = request.getParameter("pwd");
+		out.print("Hello - GET <br>");
+		out.print(name+"<br>");
+		out.print(i+"<br>");
+		out.print(p+"<br>");
 	}
 
 	/**
@@ -42,6 +49,22 @@ public class HelloServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
+		response.setContentType("text/html;charset=UTF-8");
+		request.setCharacterEncoding("UTF-8");
+		PrintWriter out =response.getWriter();
+		//.은 소속을 나타낸다.
+		
+		String n = request.getParameter("name");
+		String id =request.getParameter("id");
+		String pwd = request.getParameter("pwd");
+		
+		out.println("Hello - POST <br>");
+	
+		out.print(n+"<br>");
+		out.println(id+"<br>");
+		out.println(pwd+"<br>");
+	
 	}
 
 }
