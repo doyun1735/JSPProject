@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <%
     
-	out.print("JSP <br>");/*내장객체  */
+	out.print("JSP <br>");/*내장객체  */ 
 	String name = request.getParameter("name");/*request도 내장객체  */
     
 	

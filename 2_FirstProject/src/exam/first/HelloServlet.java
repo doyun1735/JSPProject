@@ -31,8 +31,11 @@ public class HelloServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub //클래스이름은 대문자!
 	
-		response.setContentType("text/html;charset=UTF-8"); //반응 할때 html형식으로 지원하고 UTF-8코드를 사용
-		request.setCharacterEncoding("UTF-8"); //요청인코딩 타입을 설정한다.
+		response.setContentType("text/html;charset=UTF-8"); //반응 할때 html형식으로 지원하고 UTF-8코드를 사용 대분류/소분류
+		request.setCharacterEncoding("UTF-8"); //요청인코딩 타입을 설정한다. 
+		/*get방식에서 한글 지원 할려면
+
+		server.xml 65번째 라인에 URIEncodiong="UTF-8"이라는 것을 추가 시켜준다.*/
 		PrintWriter out =response.getWriter();
 		//.은 소속을 나타낸다.
 		String name = request.getParameter("name");
@@ -51,7 +54,7 @@ public class HelloServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		response.setContentType("text/html;charset=UTF-8");
-		request.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("UTF-8"); //포스트 타입일때는 이것만 해주어도 된다!
 		PrintWriter out =response.getWriter();
 		//.은 소속을 나타낸다.
 		
