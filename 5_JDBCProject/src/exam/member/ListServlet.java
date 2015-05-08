@@ -75,10 +75,14 @@ public class ListServlet extends HttpServlet {
 		PrintWriter out =response.getWriter();
 		
 		try {
+			out.print("<h1>회원리스트</h1><hr>");
 			out.print("<table border =1>");
+			
+			out.print("<tr><th>아이디</th><th>이름</th><th>나이</th><th>성별</th><th>주소</th></tr>");
+			
 			while(rs.next()){
 				out.print("<tr>");
-				out.print("<td>"+ rs.getString("id")+"</td>");
+				out.print("<td><a href ='view?id="+ rs.getString("id")+"'>"+ rs.getString("id")+"</a></td>"); //a태그 링크거는것.
 				out.print("<td>"+rs.getString("name")+"</td>");
 				out.print("<td>"+rs.getInt("age")+"</td>");
 				out.print("<td>"+rs.getString("gender")+"</td>");

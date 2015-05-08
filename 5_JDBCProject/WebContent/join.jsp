@@ -51,9 +51,11 @@ pageEncoding="UTF-8" %>
 	
 	if(result == 0)
 		out.print("회원가입 실패");
-	else
-		out.print("회원 가입 성공");
 	
+	else{
+		out.print("회원 가입 성공");
+		response.sendRedirect("list");
+	}
 	//4. 데이터 베이스와 연결 끊음
 	//stmt.close();
 	pstmt.close();

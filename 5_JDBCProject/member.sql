@@ -20,7 +20,7 @@ create table member
 	regdate		date				default sysdate
 );
 select * from MEMBER
-
+select * from member where id='test2'
 insert into MEMBER values('test1','1234','최도','24','1','인천광역시 계양구 계산동',default);
 
 drop table member;
