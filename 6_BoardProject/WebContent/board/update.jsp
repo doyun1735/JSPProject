@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<title>JSP/Servlet Example</title>
-		<link rel="Stylesheet" type="text/css" href="../css/bootstrap.css"></link>
+		<link rel="Stylesheet" type="text/css" href="./css/bootstrap.css"></link>
 	</head>
 	
 	<body>
