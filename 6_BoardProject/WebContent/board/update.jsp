@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import ="java.util.*" %>
+<%@ page import = "board.dto.*" %>
 <!DOCTYPE html>
 
 <html>
@@ -38,6 +40,7 @@
 		    <div class="form-group">
 		      <label for="inputEmail" class="col-lg-2 control-label">이름 : </label>
 		      <div class="col-lg-10">
+		        <input type ="hidden" name ="num">
 		        <input type="text" class="form-control" id="subject" placeholder="이름을 입력하세요.">
 		      </div>
 		    </div>

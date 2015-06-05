@@ -70,7 +70,16 @@ public class BoardController extends HttpServlet {
 			action = new BoardWriteAction();
 			action.execute(request, response);
 		}
-		
+		//상세 페이지
+		else if(command.equals("/view.board")){
+			action = new BoardViewAction();
+			action.execute(request, response);
+		}
+		//삭제
+		else if(command.equals("/delete.board")){
+			action = new BoardDeleteAction();
+			action.execute(request, response);
+		}
 		
 		
 	}

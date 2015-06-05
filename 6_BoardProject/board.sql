@@ -13,5 +13,7 @@ create sequence board_seq;
 insert into BOARD values(board_seq.nextval,'1','1','111',default ,default ,'' )
 select * from BOARD;
 
-drop table board
+order by num desc
+
+drop table BOARD;
 drop sequence board_seq;
